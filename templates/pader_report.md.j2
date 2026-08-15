@@ -1,0 +1,46 @@
+# Periodic Adverse Drug Experience Report (PADER)
+
+## For {{ product_name }}
+
+| Field | Value |
+|-------|-------|
+| **Product** | {{ product_name }} |
+| **Application Number** | Not supplied |
+| **Period Covered** | {{ reporting_period_start }} to {{ reporting_period_end }} |
+| **PADER Type** | {{ report_type }} |
+| **Total Cases** | {{ total_cases }} |
+| **Date of This Report** | {{ generated_date }} |
+| **Generation Model** | {{ model }} |
+
+---
+
+## Table of Contents
+
+{% for section in sections %}
+{{ loop.index }}. [{{ section.title }}](#{{ loop.index }}-{{ section.title | lower | replace(' ', '-') | replace('/', '') }})
+{% endfor %}
+
+---
+
+> *{{ counting_note }}*
+
+---
+
+{% for section in sections %}
+## {{ loop.index }}. {{ section.title }}
+
+{% if section.review_status == 'flagged' %}
+> **[REVIEW REQUIRED - FLAGGED]** {% if section.review_notes %}Reviewer Note: {{ section.review_notes }}{% else %}This section was flagged during human review and requires further revision before regulatory submission.{% endif %}
+
+{% endif %}
+{{ section.content }}
+
+---
+
+{% endfor %}
+
+---
+
+*End of {{ report_type }} Report for {{ product_name }}*
+
+*This report was generated using the Phera pipeline. All numerical values were computed deterministically using Python. The LLM ({{ model }}) was used only to phrase precomputed evidence as regulatory prose. Human review checkpoints were applied.*

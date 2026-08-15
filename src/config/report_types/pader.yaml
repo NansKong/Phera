@@ -1,0 +1,108 @@
+# Phera -- PADER Report Configuration
+# Version 1: Configurable instructions per section
+# Structure aligned with sample PADER template
+
+report_type: pader
+version: "1.0"
+display_name: "Periodic Adverse Drug Experience Report"
+
+generation:
+  provider: replicate
+  model: openai/gpt-5.6-luna
+  reasoning_effort: low
+  verbosity: low
+  max_completion_tokens: 1200
+
+sections:
+  - id: reporting_period
+    title: "Introduction"
+    mode: llm
+    evidence:
+      - product_name
+      - reporting_period_start
+      - reporting_period_end
+      - report_type
+      - application_number
+    instruction_file: prompts/reporting_period.md
+
+  - id: narrative_summary
+    title: "Narrative Summary and Analysis"
+    mode: llm
+    evidence:
+      - total_cases
+      - serious_cases
+      - non_serious_cases
+      - serious_pct
+      - alert_case_count
+      - top_reactions
+      - top_serious_reactions
+      - age_breakdown
+      - sex_breakdown
+      - country_breakdown
+      - outcome_breakdown
+    instruction_file: prompts/narrative_summary.md
+
+  - id: summary_tabulation
+    title: "Summary Tabulation of Adverse Events"
+    mode: deterministic
+
+  - id: case_summary
+    title: "Summary Analysis of Cases"
+    mode: llm
+    evidence:
+      - total_cases
+      - new_cases_in_period
+      - serious_cases
+      - non_serious_cases
+      - serious_pct
+      - age_breakdown
+      - sex_breakdown
+      - country_breakdown
+      - reaction_breakdown
+      - seriousness_breakdown
+      - outcome_breakdown
+    instruction_file: prompts/case_summary.md
+
+  - id: reaction_analysis
+    title: "Reaction/Adverse Event Analysis"
+    mode: llm
+    evidence:
+      - top_reactions
+      - top_serious_reactions
+      - reactions_by_age_group
+      - reactions_by_sex
+      - reactions_over_time
+      - soc_available
+    instruction_file: prompts/reaction_analysis.md
+
+  - id: serious_cases
+    title: "Serious Cases / 15-Day Alerts"
+    mode: llm
+    evidence:
+      - serious_cases
+      - alert_case_count
+      - alert_case_reason
+      - alert_cases_table
+      - expectedness_available
+    instruction_file: prompts/serious_cases.md
+
+  - id: trends
+    title: "Trends and Important Observations"
+    mode: llm
+    evidence:
+      - monthly_case_counts
+      - monthly_top_reaction_counts
+      - country_trend
+      - seriousness_trend
+    instruction_file: prompts/trends.md
+
+  - id: history_of_actions
+    title: "History of Actions"
+    mode: llm
+    evidence:
+      - actions_provided
+    instruction_file: prompts/history_of_actions.md
+
+  - id: case_index
+    title: "Case Index / Listing"
+    mode: deterministic

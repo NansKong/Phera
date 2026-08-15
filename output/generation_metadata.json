@@ -1,0 +1,808 @@
+{
+  "generated_date": "2026-08-15T13:57:47.741896",
+  "sections": [
+    {
+      "section_id": "reporting_period",
+      "title": "Introduction",
+      "mode": "llm",
+      "model": "openai/gpt-5.6-luna",
+      "evidence_keys": [
+        "product_name",
+        "reporting_period_start",
+        "reporting_period_end",
+        "report_type",
+        "application_number"
+      ],
+      "generation_status": "generated",
+      "review_status": "approved",
+      "review_notes": null
+    },
+    {
+      "section_id": "narrative_summary",
+      "title": "Narrative Summary and Analysis",
+      "mode": "llm",
+      "model": "openai/gpt-5.6-luna",
+      "evidence_keys": [
+        "total_cases",
+        "serious_cases",
+        "non_serious_cases",
+        "serious_pct",
+        "alert_case_count",
+        "top_reactions",
+        "top_serious_reactions",
+        "age_breakdown",
+        "sex_breakdown",
+        "country_breakdown",
+        "outcome_breakdown"
+      ],
+      "generation_status": "generated",
+      "review_status": "approved",
+      "review_notes": null
+    },
+    {
+      "section_id": "summary_tabulation",
+      "title": "Summary Tabulation of Adverse Events",
+      "mode": "deterministic",
+      "model": null,
+      "evidence_keys": null,
+      "generation_status": "generated",
+      "review_status": "approved",
+      "review_notes": null
+    },
+    {
+      "section_id": "case_summary",
+      "title": "Summary Analysis of Cases",
+      "mode": "llm",
+      "model": "openai/gpt-5.6-luna",
+      "evidence_keys": [
+        "total_cases",
+        "new_cases_in_period",
+        "serious_cases",
+        "non_serious_cases",
+        "serious_pct",
+        "age_breakdown",
+        "sex_breakdown",
+        "country_breakdown",
+        "reaction_breakdown",
+        "seriousness_breakdown",
+        "outcome_breakdown"
+      ],
+      "generation_status": "generated",
+      "review_status": "approved",
+      "review_notes": null
+    },
+    {
+      "section_id": "reaction_analysis",
+      "title": "Reaction/Adverse Event Analysis",
+      "mode": "llm",
+      "model": "openai/gpt-5.6-luna",
+      "evidence_keys": [
+        "top_reactions",
+        "top_serious_reactions",
+        "reactions_by_age_group",
+        "reactions_by_sex",
+        "reactions_over_time",
+        "soc_available"
+      ],
+      "generation_status": "generated",
+      "review_status": "approved",
+      "review_notes": null
+    },
+    {
+      "section_id": "serious_cases",
+      "title": "Serious Cases / 15-Day Alerts",
+      "mode": "llm",
+      "model": "openai/gpt-5.6-luna",
+      "evidence_keys": [
+        "serious_cases",
+        "alert_case_count",
+        "alert_case_reason",
+        "alert_cases_table",
+        "expectedness_available"
+      ],
+      "generation_status": "generated",
+      "review_status": "approved",
+      "review_notes": null
+    },
+    {
+      "section_id": "trends",
+      "title": "Trends and Important Observations",
+      "mode": "llm",
+      "model": "openai/gpt-5.6-luna",
+      "evidence_keys": [
+        "monthly_case_counts",
+        "monthly_top_reaction_counts",
+        "country_trend",
+        "seriousness_trend"
+      ],
+      "generation_status": "generated",
+      "review_status": "approved",
+      "review_notes": null
+    },
+    {
+      "section_id": "history_of_actions",
+      "title": "History of Actions",
+      "mode": "llm",
+      "model": "openai/gpt-5.6-luna",
+      "evidence_keys": [
+        "actions_provided"
+      ],
+      "generation_status": "generated",
+      "review_status": "approved",
+      "review_notes": null
+    },
+    {
+      "section_id": "case_index",
+      "title": "Case Index / Listing",
+      "mode": "deterministic",
+      "model": null,
+      "evidence_keys": null,
+      "generation_status": "generated",
+      "review_status": "approved",
+      "review_notes": null
+    }
+  ],
+  "validation": {
+    "overall_status": "pass",
+    "completeness": {
+      "status": "pass",
+      "missing_sections": [],
+      "empty_sections": [],
+      "failed_sections": []
+    },
+    "cross_section_consistency": {
+      "status": "pass",
+      "mismatches": [],
+      "pts_checked": 50
+    },
+    "sections": [
+      {
+        "section_id": "reporting_period",
+        "checks": {
+          "numeric_consistency": {
+            "status": "pass",
+            "found_numbers": [
+              "12",
+              "2024",
+              "2025",
+              "21",
+              "26",
+              "27",
+              "314.80"
+            ],
+            "evidence_numbers": [
+              "12",
+              "2024",
+              "2025",
+              "26",
+              "27"
+            ],
+            "unsupported_numbers": []
+          },
+          "unsupported_claims": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "counting_level_mismatch": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "meddra_term_integrity": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "dangling_content": {
+            "status": "pass",
+            "flagged_phrases": []
+          }
+        },
+        "overall_status": "pass"
+      },
+      {
+        "section_id": "narrative_summary",
+        "checks": {
+          "numeric_consistency": {
+            "status": "pass",
+            "found_numbers": [
+              "1",
+              "1,023",
+              "1,024",
+              "1,039",
+              "1,280",
+              "134",
+              "15",
+              "18",
+              "185",
+              "2",
+              "24",
+              "28",
+              "281",
+              "3",
+              "30",
+              "31",
+              "33",
+              "34",
+              "345",
+              "36",
+              "37",
+              "38",
+              "4",
+              "406",
+              "43",
+              "46",
+              "493",
+              "503",
+              "51",
+              "536",
+              "54",
+              "56",
+              "8",
+              "80",
+              "9",
+              "99.9%",
+              "998"
+            ],
+            "evidence_numbers": [
+              "1",
+              "1023",
+              "1024",
+              "1039",
+              "1280",
+              "134",
+              "15",
+              "18",
+              "185",
+              "2",
+              "20",
+              "22",
+              "23",
+              "24",
+              "25",
+              "27",
+              "28",
+              "281",
+              "3",
+              "30",
+              "31",
+              "33",
+              "34",
+              "345",
+              "36",
+              "37",
+              "38",
+              "4",
+              "406",
+              "43",
+              "46",
+              "493",
+              "503",
+              "51",
+              "53",
+              "536",
+              "54",
+              "56",
+              "8",
+              "80",
+              "9",
+              "99.9%",
+              "998"
+            ],
+            "unsupported_numbers": []
+          },
+          "unsupported_claims": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "counting_level_mismatch": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "meddra_term_integrity": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "dangling_content": {
+            "status": "pass",
+            "flagged_phrases": []
+          }
+        },
+        "overall_status": "pass"
+      },
+      {
+        "section_id": "summary_tabulation",
+        "checks": {},
+        "overall_status": "pass"
+      },
+      {
+        "section_id": "case_summary",
+        "checks": {
+          "numeric_consistency": {
+            "status": "pass",
+            "found_numbers": [
+              "1",
+              "1,023",
+              "1,024",
+              "1,039",
+              "1,280",
+              "12",
+              "134",
+              "15",
+              "18",
+              "185",
+              "2",
+              "24",
+              "27",
+              "28",
+              "281",
+              "3",
+              "30",
+              "31",
+              "33",
+              "34",
+              "345",
+              "36",
+              "37",
+              "38",
+              "4",
+              "406",
+              "43",
+              "46",
+              "493",
+              "503",
+              "51",
+              "536",
+              "54",
+              "56",
+              "8",
+              "80",
+              "9",
+              "99.9%",
+              "998"
+            ],
+            "evidence_numbers": [
+              "1",
+              "1023",
+              "1024",
+              "1039",
+              "12",
+              "1280",
+              "13",
+              "134",
+              "15",
+              "16",
+              "17",
+              "18",
+              "185",
+              "19",
+              "2",
+              "20",
+              "22",
+              "23",
+              "24",
+              "25",
+              "27",
+              "28",
+              "281",
+              "3",
+              "30",
+              "31",
+              "33",
+              "34",
+              "345",
+              "36",
+              "37",
+              "38",
+              "4",
+              "406",
+              "43",
+              "46",
+              "493",
+              "503",
+              "51",
+              "536",
+              "54",
+              "56",
+              "8",
+              "80",
+              "9",
+              "99.9%",
+              "998"
+            ],
+            "unsupported_numbers": []
+          },
+          "unsupported_claims": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "counting_level_mismatch": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "meddra_term_integrity": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "dangling_content": {
+            "status": "pass",
+            "flagged_phrases": []
+          }
+        },
+        "overall_status": "pass"
+      },
+      {
+        "section_id": "reaction_analysis",
+        "checks": {
+          "numeric_consistency": {
+            "status": "pass",
+            "found_numbers": [
+              "1",
+              "10",
+              "2",
+              "20",
+              "2025",
+              "21",
+              "22",
+              "26",
+              "27",
+              "30",
+              "31",
+              "32",
+              "33",
+              "36",
+              "37",
+              "38",
+              "43",
+              "45",
+              "46",
+              "53",
+              "54",
+              "80",
+              "9"
+            ],
+            "evidence_numbers": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07",
+              "08",
+              "09",
+              "1",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "2",
+              "20",
+              "2024",
+              "2025",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "3",
+              "30",
+              "31",
+              "32",
+              "33",
+              "36",
+              "37",
+              "38",
+              "4",
+              "43",
+              "45",
+              "46",
+              "5",
+              "53",
+              "54",
+              "6",
+              "7",
+              "8",
+              "80",
+              "9"
+            ],
+            "unsupported_numbers": []
+          },
+          "unsupported_claims": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "counting_level_mismatch": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "meddra_term_integrity": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "dangling_content": {
+            "status": "pass",
+            "flagged_phrases": []
+          }
+        },
+        "overall_status": "pass"
+      },
+      {
+        "section_id": "serious_cases",
+        "checks": {
+          "numeric_consistency": {
+            "status": "pass",
+            "found_numbers": [
+              "01",
+              "02",
+              "03",
+              "05",
+              "06",
+              "08",
+              "09",
+              "1,023",
+              "10",
+              "11",
+              "15",
+              "17",
+              "18",
+              "19",
+              "2025",
+              "21",
+              "22",
+              "24872990",
+              "25",
+              "25007823",
+              "25063910",
+              "25265801",
+              "25327402",
+              "25647220",
+              "25817526",
+              "25972607",
+              "29",
+              "314.80"
+            ],
+            "evidence_numbers": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07",
+              "08",
+              "09",
+              "1,023",
+              "10",
+              "1023",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "2025",
+              "21",
+              "22",
+              "23",
+              "24",
+              "24803463",
+              "24834918",
+              "24858756",
+              "24872990",
+              "24969537",
+              "24979403",
+              "24989291",
+              "24990334",
+              "24997826",
+              "25",
+              "25006602",
+              "25007823",
+              "25040902",
+              "25055194",
+              "25063910",
+              "25066459",
+              "25132371",
+              "25187835",
+              "25206508",
+              "25217031",
+              "25265801",
+              "25298788",
+              "25310411",
+              "25327402",
+              "25341255",
+              "25372181",
+              "25453501",
+              "25463940",
+              "25465662",
+              "25528810",
+              "25532382",
+              "25552485",
+              "25563974",
+              "25571836",
+              "25576857",
+              "25595958",
+              "25608501",
+              "25626868",
+              "25647220",
+              "25647682",
+              "25753756",
+              "25817526",
+              "25839565",
+              "25884461",
+              "25889979",
+              "25937530",
+              "25937867",
+              "25972607",
+              "25979414",
+              "25994875",
+              "26",
+              "26029811",
+              "28",
+              "29",
+              "30",
+              "31",
+              "314.80"
+            ],
+            "unsupported_numbers": []
+          },
+          "unsupported_claims": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "counting_level_mismatch": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "meddra_term_integrity": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "dangling_content": {
+            "status": "pass",
+            "flagged_phrases": []
+          }
+        },
+        "overall_status": "pass"
+      },
+      {
+        "section_id": "trends",
+        "checks": {
+          "numeric_consistency": {
+            "status": "pass",
+            "found_numbers": [
+              "1",
+              "102",
+              "108",
+              "109",
+              "2024",
+              "2025",
+              "21",
+              "64",
+              "75",
+              "76",
+              "78",
+              "80",
+              "83",
+              "84",
+              "94"
+            ],
+            "evidence_numbers": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07",
+              "08",
+              "09",
+              "1",
+              "10",
+              "102",
+              "108",
+              "109",
+              "11",
+              "12",
+              "14",
+              "17",
+              "2",
+              "20",
+              "2024",
+              "2025",
+              "21",
+              "22",
+              "23",
+              "25",
+              "26",
+              "28",
+              "29",
+              "3",
+              "32",
+              "33",
+              "35",
+              "4",
+              "40",
+              "41",
+              "5",
+              "54",
+              "6",
+              "64",
+              "67",
+              "7",
+              "75",
+              "76",
+              "78",
+              "8",
+              "80",
+              "83",
+              "84",
+              "9",
+              "94"
+            ],
+            "unsupported_numbers": []
+          },
+          "unsupported_claims": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "counting_level_mismatch": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "meddra_term_integrity": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "dangling_content": {
+            "status": "pass",
+            "flagged_phrases": []
+          }
+        },
+        "overall_status": "pass"
+      },
+      {
+        "section_id": "history_of_actions",
+        "checks": {
+          "numeric_consistency": {
+            "status": "pass",
+            "found_numbers": [],
+            "evidence_numbers": [],
+            "unsupported_numbers": []
+          },
+          "unsupported_claims": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "counting_level_mismatch": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "meddra_term_integrity": {
+            "status": "pass",
+            "flagged_phrases": []
+          },
+          "dangling_content": {
+            "status": "pass",
+            "flagged_phrases": []
+          }
+        },
+        "overall_status": "pass"
+      },
+      {
+        "section_id": "case_index",
+        "checks": {},
+        "overall_status": "pass"
+      }
+    ]
+  }
+}

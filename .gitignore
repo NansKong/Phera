@@ -1,0 +1,72 @@
+# ==============================================================================
+# GenAR Challenge .gitignore — Submission Guide Adherence
+# ==============================================================================
+
+# 1. Environment & API Secrets (DO NOT INCLUDE IN SUBMISSION)
+.env
+.env.*
+*.key
+*.pem
+
+# 2. Virtual Environments & Dependencies (DO NOT INCLUDE IN SUBMISSION)
+venv/
+.venv/
+env/
+ENV/
+node_modules/
+
+# 3. Datasets (DO NOT INCLUDE IN SUBMISSION — eats size budget)
+*.xlsx
+*.csv
+data/
+docs/*.xlsx
+docs/*.csv
+
+# 4. Model Weights & Caches (DO NOT INCLUDE IN SUBMISSION)
+.cache/
+huggingface/
+transformers/
+torch/
+models/
+*.bin
+*.safetensors
+*.pth
+*.onnx
+*.pt
+*.ckpt
+
+# 5. Python Cache & Build Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 6. IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# 7. OS Generated Files
+Thumbs.db
+.DS_Store
+ehthumbs.db
+Desktop.ini
+
+# 8. Archive & Temporary Files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+tmp/
+scratch/

@@ -1,0 +1,21 @@
+# Phera - GenAR V1 Pharmacovigilance Pipeline
+# Python 3.11+
+
+# Core data handling
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# Configuration
+pyyaml>=6.0
+
+# Template rendering
+jinja2>=3.1.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# LLM provider
+replicate>=0.25.0
+
+# Testing
+pytest>=7.0.0
