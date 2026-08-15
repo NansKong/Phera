@@ -231,9 +231,8 @@ To scale evaluation across thousands of generated safety reports without manual 
 │   └── validate.py          # 7-check automated validation suite
 ├── templates/
 │   └── pader_report.md.j2   # Jinja2 report template
-├── tests/                   # 74+ unit & integration tests
 ├── output/                  # Generated reports, metrics, & metadata
-├── docs/                    # Challenge documentation & submission guide
+├── data/                    # Bisoprolol ICSR dataset
 ├── requirements.txt         # Project dependencies
 └── README.md                # Submission documentation
 ```
